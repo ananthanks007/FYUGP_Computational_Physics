@@ -18,8 +18,8 @@ for row in diff_table:
    print(row)
 x_test=1.5
 p=(x_test-x[0])/h
-dy=(1/h)(diff_table[1][0]+((2*p-1)/math.factorial(2))*diff_table[2][0]+((3*p*2-6*p+2)/math.factorial(3))*diff_table[3][0])
-d2y=(1/h*2)(diff_table[2][0]+(p-1)*diff_table[3][0])
+dy=(1/h)*(diff_table[1][0]+((2*p-1)/math.factorial(2))*diff_table[2][0]+((3*p**2-6*p+2)/math.factorial(3))*diff_table[3][0])
+d2y=(1/h**2)*(diff_table[2][0]+(p-1)*diff_table[3][0])
 print(f"At x={x_test}:")
 print(f"First derivative(dy/dx)≈{dy}")
 print(f"Second derivative (d²y/dx²)≈{d2y}")
