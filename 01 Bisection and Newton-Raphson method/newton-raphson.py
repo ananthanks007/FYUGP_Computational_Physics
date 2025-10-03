@@ -1,5 +1,5 @@
 def f(x):
-    return (x**2-2)
+    return (x**2-3)
 def df(x):
     return (2*x)
 def newton_raphson(x0,tol, max_iter):
