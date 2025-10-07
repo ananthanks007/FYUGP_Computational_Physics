@@ -50,3 +50,5 @@ plt.show()
 
 print("Simulated Half-life: ", t_half_mc)
 print("Theoretical Half-life :", t_half)
+
+

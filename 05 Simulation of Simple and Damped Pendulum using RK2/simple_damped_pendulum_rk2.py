@@ -10,6 +10,7 @@ Original file is located at
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def rk2_update(theta_i, omega_i, dt, b, g, L):
     theta_mid = theta_i + 0.5 * dt * omega_i
     omega_mid = omega_i + 0.5 * dt * (-b * omega_i - (g / L) * np.sin(theta_i))
@@ -55,12 +56,13 @@ plt.ylabel('Angle (rad)')
 plt.title('Pendulum Motion')
 plt.grid(True)
 
+
+
 plt.subplot(1, 2, 2)
 plt.plot(theta, angular_momentum)
 plt.xlabel('Angle (rad)')
 plt.ylabel('Angular Momentum (kg·m²/s)')
 plt.title('Phase Space Trajectory')
 plt.grid(True)
-
 plt.tight_layout()
 plt.show()

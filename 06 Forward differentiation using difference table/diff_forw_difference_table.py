@@ -23,3 +23,8 @@ d2y=(1/h**2)*(diff_table[2][0]+(p-1)*diff_table[3][0])
 print(f"At x={x_test}:")
 print(f"First derivative(dy/dx)≈{dy}")
 print(f"Second derivative (d²y/dx²)≈{d2y}")
+
+
+
+
+
