@@ -2,8 +2,27 @@ import numpy as np
 
 # Simpsons rule for a given set of values
 
+#### Always use Simpson's rule for even number of intervals
 
 
+# Given data
+x = np.array([0.25, 0.30, 0.35, 0.40, 0.45])
+y = np.array([24.1, 25.5, 26.6, 27.3, 27.9])
+
+def simpsons(x,y):
+    
+
+    # Step size (assuming equal spacing)
+    h = x[1] - x[0]
+    n = len(x) - 1  # number of intervals
+
+    # Apply Simpson’s 1/3 rule
+    result = (h / 3) * (y[0]+ 4 * np.sum(y[1:n:2])  + 2 * np.sum(y[2:n:2])  + y[n])
+
+    return result
+
+integral = simpsons(x,y)
+print(f"Integral using Simpson's rule is : {integral}")
 
 # Simpson's Rule for given function
 
