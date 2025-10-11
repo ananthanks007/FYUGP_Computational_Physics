@@ -20,5 +20,24 @@ def trapez(t,v):
 integral = trapez(t,v)
 print(integral)
 
+# Trapezoidal Rule for given function
+
+def f(x):
+    return 5*x**2 + 2
+
+def trapez_func(f, a, b, n):
+    h = (b - a) / n
+    sum = f(a) + f(b) # first and last terms
+
+    for i in range(1, n): # middle terms
+        x_i = a + i*h
+        sum = sum + 2 * f(x_i)
+    return (h/2) * sum
+
+a,b,n = 0.0, 2.0, 100
+integral = trapez_func(f, a, b, n)
+
+print(integral)
+    
 
 
