@@ -14,7 +14,7 @@ p_t = m*x0*w*np.cos(w*t)
 
 plt.figure(figsize=(8,15))
 plt.subplot(2,1,1)
-plt.plot(t,p_t)
+plt.plot(t,x_t)
 plt.xlabel('Time')
 plt.ylabel('Position')
 plt.grid(True)
