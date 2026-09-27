@@ -41,7 +41,7 @@ omega = 2 * np.pi * f
 
 t_ac = np.linspace(0, 5, 2000)
 
-Q_ac = Q0 * np.abs(np.sin(omega * t_ac))
+Q_ac = Q0 * (np.sin(omega * t_ac))
 
 plt.figure(figsize=(8,5))
 

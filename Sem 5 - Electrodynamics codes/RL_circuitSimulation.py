@@ -15,7 +15,6 @@ tau = L/R
 # DC response
 I_dc = (V/R)*(1-np.exp(-t/tau))
 
-
 # AC parameters
 f = 5
 omega = 2*np.pi*f
