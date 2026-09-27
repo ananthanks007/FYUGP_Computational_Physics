@@ -13,7 +13,9 @@ t = np.linspace(0,1,1000)
 tau = L/R
 
 # DC response
-I_dc = (V/R)*(1-np.exp(-t/tau))
+I_growth = (V/R)*(1-np.exp(-t/tau))
+I_decay = (V/R)*np.exp(-t/tau)
+
 
 # AC parameters
 f = 5
@@ -33,10 +35,12 @@ V_ac = V*np.sin(omega*t)
 
 
 # DC graph
-plt.plot(t,I_dc)
+plt.plot(t,I_growth, label="Current growth")
+plt.plot(t,I_decay, label="Current decay|")
 plt.xlabel("Time")
 plt.ylabel("Current")
 plt.title("RL Circuit Response under DC")
+plt.legend()
 plt.grid()
 plt.show()
 
